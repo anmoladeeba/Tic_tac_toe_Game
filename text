@@ -1,0 +1,5 @@
+tic_tac_toe_game/ (root directory)
+├── index.html
+├── style.css
+├── script.js
+└── package.json
