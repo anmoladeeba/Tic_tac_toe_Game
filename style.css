@@ -1,0 +1,227 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #1a0036 0%, #2d0b4e 100%);
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: rgba(30, 0, 60, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  padding: 32px 24px 40px 24px;
+  position: relative;
+  flex: 1 0 auto;
+}
+
+.game-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.game-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+  background: linear-gradient(90deg, #ff4ecb 30%, #ffb86c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.game-header span {
+  font-size: 1.2rem;
+  color: #fff;
+  background: none;
+  -webkit-text-fill-color: #fff;
+}
+
+.player-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.player-inputs input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+.player-inputs button {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #ff4ecb;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.player-inputs button:hover {
+  background: #ffb86c;
+  color: #1a0036;
+}
+
+#gameArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 12px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 24px 0 rgba(255, 78, 203, 0.15);
+  position: relative;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  background: rgba(30, 0, 60, 0.7);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(255, 78, 203, 0.08);
+}
+
+.cell.x {
+  color: #39ff14;
+  text-shadow: 0 0 8px #39ff14aa;
+}
+
+.cell.o {
+  color: #fff;
+  text-shadow: 0 0 8px #fff8;
+}
+
+.cell.winner {
+  background: #ff4ecb;
+  color: #fff;
+  box-shadow: 0 0 16px 4px #ff4ecb88;
+  z-index: 2;
+}
+
+.message {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  min-height: 32px;
+  text-align: center;
+  color: #ffb86c;
+  font-weight: bold;
+}
+
+#resetBtn {
+  padding: 8px 24px;
+  border-radius: 8px;
+  border: none;
+  background: #ff4ecb;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+#resetBtn:hover {
+  background: #ffb86c;
+  color: #1a0036;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Footer Styles */
+.footer {
+  flex-shrink: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #1a0036 60%, #ff4ecb 100%);
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 -2px 16px 0 rgba(255, 78, 203, 0.10);
+  padding: 24px 0 12px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.footer-logo-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff4ecb 40%, #ffb86c 100%);
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: bold;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  margin-right: 10px;
+  box-shadow: 0 2px 8px #ff4ecb55;
+  letter-spacing: 1px;
+  border: 2px solid #fff2;
+}
+
+.footer-logo-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.footer-logo-highlight {
+  color: #ffb86c;
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+.footer-credit {
+  font-size: 1rem;
+  color: #ffb86c;
+  opacity: 0.9;
+}
+
+.footer-author {
+  color: #ff4ecb;
+  font-weight: bold;
+}
+
+html, body {
+  height: 100%;
+}
